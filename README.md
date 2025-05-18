@@ -49,8 +49,8 @@ The results on SceneFlow dataset.
 
 ## Environment
 * NVIDIA RTX 4070S
-* Python 3.8
-* Pytorch 1.12
+* Python 3.10
+* Pytorch 2.0.0
 
 ## Install
 
