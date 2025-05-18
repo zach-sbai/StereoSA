@@ -1,2 +1,126 @@
-# StereoSA
-StereoSA, a highly accurate stereo matching model.
+<p align="center">
+  <h1 align="center">Enhancing Stereo Matching with Multi-Scale Selective Attention Aggregation</h1>
+  <p align="center">
+    Mahmoud Tahmasebi* (mahmoud.tahmasebi@research.atu.ie)
+  </p>
+  <h3 align="center"><a href="">Paper</a>
+  <div align="center"></div>
+</p>
+<p align="center">
+  <a href="">
+    <img src="https://github.com/M2219/StereoSA/blob/main/imgs/StereoSA.png" alt="Logo" width="90%">
+  </a>
+</p>
+
+
+# Performance on KITTI raw dataset
+<p align="center">
+  <img width="600" height="300" src="./imgs/mygif.gif" data-zoomable>
+</p>
+
+# SOTA results.
+
+| Method | KITTI 2012 <br> (3-noc) | KITTI 2012 <br> (3-all) | KITTI 2015 <br> (D1-bg) | KITTI 2015 <br> (D1-fg) | KITTI 2015 <br> (D1-all) |Runtime <br> (ms)|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| CFNet | 1.23 % | 1.58 % | 1.54 % | 3.56 % | 1.94 % | 29 |
+| IGEV-Stereo | 1.55 % | 1.93 % | 1.79 % | 3.82 % | 2.13 % | 33 |
+| ACVNet | 1.62 % | 2.03 % | 1.81 % | 4.09 % | 2.19 % | 35 |
+| LEAStereo | 1.62 % | 2.03 % | 1.81 % | 4.09 % | 2.19 % | 35 |
+| EdgeStereo-V2 | 1.41 % | 1.89 % | 1.74 % | **3.20 %** | 1.98 % | 54 |
+| CREStereo | 1.45 % | 1.85 % | 1.70 % | 3.53 % | 2.01 % | 45 |
+| SegStereo | 4.11 % | 4.65 % | 2.21 % | 6.16 % | 4.43 % | 60 |
+| SSPCVNet | 1.91 % | 2.42 % | 1.99 % | 5.39 % | 2.55 % | 62 |
+| CSPN | 1.64 % | 2.11 % | 1.91 % | 4.47 % | 2.33 % | 80 |
+| **StereoSA**| **1.30 %** | **1.67 %** | **1.60 %** | 3.33 % | **1.89 %** | 67 |
+
+The results on SceneFlow dataset.
+| Method (Real-Time) | EPE [px] | Runtime (ms) | GPU |
+|:-:|:-:|:-:|:-:|
+| DCVSMNet | 0.60 | 67 | RTX 3080 |
+| ACVNet | 0.48 | 200 | RTX 3090 |
+| Selective-IGEV | 0.44 | 240 | RTX 3090 |
+| IGEV++ | 0.43 | 280 | RTX 3080 |
+| DLNR | 0.47 | 297 | A100 |
+| MoCha-Stereo | **0.41** | 340 | 2 x A6000 |
+| DiffuVolume | 0.46 | 360 | RTX 3090 |
+| IGEV-Stereo | 0.47 | 370 | RTX 3090 |
+| **StereoSA** | **0.41** | **64** | RTX 4070S |
+# How to use
+
+## Environment
+* NVIDIA RTX 4070S
+* Python 3.8
+* Pytorch 1.12
+
+## Install
+
+### Create a virtual environment and activate it.
+
+```
+conda create -n StereoSA python=3.10
+conda activate StereoSA
+```
+### Dependencies
+
+```
+conda install pytorch torchvision torchaudio cudatoolkit=11.8 -c pytorch -c nvidia
+pip install opencv-python
+pip install scikit-image
+pip install tensorboard
+pip install matplotlib 
+pip install tqdm
+pip install timm=1.0.11
+```
+
+## Data Preparation
+* [SceneFlow Datasets](https://lmb.informatik.uni-freiburg.de/resources/datasets/SceneFlowDatasets.en.html)
+* [KITTI 2012](http://www.cvlibs.net/datasets/kitti/eval_stereo_flow.php?benchmark=stereo)
+* [KITTI 2015](http://www.cvlibs.net/datasets/kitti/eval_scene_flow.php?benchmark=stereo)
+* [Middlebury](https://vision.middlebury.edu/stereo/submit3/)
+
+## Train
+
+Use the following command to train StereoSA on SceneFlow.
+First training,
+```
+python train_sceneflow.py --logdir ./checkpoints/sceneflow/first/
+```
+Second training,
+```
+python train_sceneflow.py --logdir ./checkpoints/sceneflow/second/ --loadckpt ./checkpoints/sceneflow/first/checkpoint_000059.ckpt
+```
+
+Use the following command to finetune StereoSA on KITTI using the pretrained model on SceneFlow,
+```
+python train_kitti.py --logdir ./checkpoints/kitti/ --loadckpt ./checkpoints/sceneflow/second/checkpoint_000059.ckpt
+```
+
+
+## Evaluation on SceneFlow and KITTI
+
+### Pretrained Model
+* [StereoSA](https://drive.google.com/drive/folders/1VcfEpO9Mv0Bt7Xdvckii4SAavW8cL1_d)
+
+Generate disparity images of KITTI test set,
+```
+python save_disp.py
+```
+
+# Citation
+
+If you find this project helpful in your research, welcome to cite the paper.
+
+```
+@misc{tahmasebi2024dcvsmnet,
+      title={StereoSA: Double Cost Volume Stereo Matching Network}, 
+      author={Mahmoud Tahmasebi and Saif Huq and Kevin Meehan and Marion McAfee},
+      year={2024},
+      eprint={2402.16473},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
+
+# Acknowledgements
+
+Thanks to open source works: [CoEx](https://github.com/antabangun/coex), [ACVNet](https://github.com/gangweiX/Fast-ACVNet), [CGI-Stereo](https://github.com/gangweiX/CGI-Stereo).
