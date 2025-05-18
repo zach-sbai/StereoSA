@@ -111,16 +111,8 @@ python save_disp.py
 If you find this project helpful in your research, welcome to cite the paper.
 
 ```
-@misc{tahmasebi2024dcvsmnet,
-      title={StereoSA: Double Cost Volume Stereo Matching Network}, 
-      author={Mahmoud Tahmasebi and Saif Huq and Kevin Meehan and Marion McAfee},
-      year={2024},
-      eprint={2402.16473},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
-}
 ```
 
 # Acknowledgements
 
-Thanks to open source works: [CoEx](https://github.com/antabangun/coex), [ACVNet](https://github.com/gangweiX/Fast-ACVNet), [CGI-Stereo](https://github.com/gangweiX/CGI-Stereo).
+Thanks to open source works: [OpenVINS](https://github.com/rpng/open_vins).
