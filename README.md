@@ -99,7 +99,7 @@ python train_kitti.py --logdir ./checkpoints/kitti/ --loadckpt ./checkpoints/sce
 ## Evaluation on SceneFlow and KITTI
 
 ### Pretrained Model
-* [StereoSA](https://drive.google.com/drive/folders/1VcfEpO9Mv0Bt7Xdvckii4SAavW8cL1_d)
+* [StereoSA](https://drive.google.com/drive/folders/1wfyn3Wi_NIEc0uottSXt43mFUiraiB9Q?usp=drive_link)
 
 Generate disparity images of KITTI test set,
 ```
