@@ -14,6 +14,8 @@
 
 
 # Performance on KITTI raw dataset
+This video was recorded during a straight-line navigation test on the Hunter V2 Robot. 
+For more details, please visit the project repository: [https://github.com/M2219/ACNMR](https://github.com/M2219/ACNMR)
 <p align="center">
   <img width="600" height="500" src="./imgs/mygif.gif" data-zoomable>
 </p>
