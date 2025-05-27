@@ -21,9 +21,10 @@ You may also be interested in the following related repository, which is a fork 
 [https://github.com/M2219/open_vins](https://github.com/M2219/open_vins)
 This fork modifies the original code to accept disparity maps for finding keypoint correspondences in images and includes configuration files for the OAK-D Pro camera.
 <p align="center">
-  <img src="hunter.png" alt="Hunter V2 Robot" width="45%" />
-  <img src="hunter_sim.png" alt="Hunter V2 Simulation" width="45%" />
+  <img src="./imgs/hunter.png" alt="Hunter V2 Robot" width="45%" />
+  <img src="./imgs/hunter_sim.png" alt="Hunter V2 Simulation" width="45%" />
 </p>
+
 <p align="center">
   <img width="600" height="500" src="./imgs/mygif.gif" data-zoomable>
 </p>
