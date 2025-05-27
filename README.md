@@ -14,8 +14,13 @@
 
 
 # Performance on KITTI raw dataset
-This video was recorded during a straight-line navigation test on the Hunter V2 Robot. 
+This video was recorded during a straight-line navigation test on the Hunter V2 Robot.
 For more details, please visit the project repository: [https://github.com/M2219/ACNMR](https://github.com/M2219/ACNMR)
+
+You may also be interested in the following related repository, which is a fork of OpenVINS:
+[https://github.com/M2219/open_vins](https://github.com/M2219/open_vins)
+This fork modifies the original code to accept disparity maps for finding keypoint correspondences in images and includes configuration files for the OAK-D Pro camera.
+
 <p align="center">
   <img width="600" height="500" src="./imgs/mygif.gif" data-zoomable>
 </p>
