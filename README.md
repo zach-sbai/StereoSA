@@ -42,7 +42,7 @@ This fork modifies the original code to accept disparity maps for finding keypoi
 | SegStereo | 4.11 % | 4.65 % | 2.21 % | 6.16 % | 4.43 % | 600 |
 | SSPCVNet | 1.91 % | 2.42 % | 1.99 % | 5.39 % | 2.55 % | 900 |
 | CSPN | 1.64 % | 2.11 % | 1.91 % | 4.47 % | 2.33 % | 1000 |
-| **StereoSA**| **1.30 %** | **1.67 %** | **1.60 %** | 3.33 % | **1.89 %** | 67 |
+| **StereoSA**| **1.30 %** | **1.67 %** | **1.60 %** | 3.33 % | **1.89 %** | 67 (RTX 4070S) |
 
 The results on SceneFlow dataset.
 | Method (Real-Time) | EPE [px] | Runtime (ms) | GPU |
