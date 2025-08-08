@@ -31,7 +31,7 @@ The confidence branch generates a map that detects and suppresses unreliable dis
 </p>
 
 
-# Integration in visual-inertial odometry.
+# Integration into visual-inertial odometry.
 This video was recorded during a straight-line navigation test on the Hunter V2 Robot.
 For more details, please visit the project repository: [https://github.com/M2219/ACNMR](https://github.com/M2219/ACNMR)
 
