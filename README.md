@@ -31,6 +31,36 @@ The confidence branch generates a map that detects and suppresses unreliable dis
 </p>
 
 
+### SOTA results on KITTI dataset.
+
+| Method | KITTI 2012 <br> (3-noc) | KITTI 2012 <br> (3-all) | KITTI 2015 <br> (D1-bg) | KITTI 2015 <br> (D1-fg) | KITTI 2015 <br> (D1-all) |Runtime <br> (ms)|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| CFNet | 1.23 % | 1.58 % | 1.54 % | 3.56 % | 1.94 % | 180 |
+| IGEV-Stereo | 1.55 % | 1.93 % | 1.79 % | 3.82 % | 2.13 % | 180 |
+| ACVNet | 1.62 % | 2.03 % | 1.81 % | 4.09 % | 2.19 % | 200 |
+| LEAStereo | 1.62 % | 2.03 % | 1.81 % | 4.09 % | 2.19 % | 300 |
+| EdgeStereo-V2 | 1.41 % | 1.89 % | 1.74 % | **3.20 %** | 1.98 % | 320 |
+| CREStereo | 1.45 % | 1.85 % | 1.70 % | 3.53 % | 2.01 % | 410 |
+| SegStereo | 4.11 % | 4.65 % | 2.21 % | 6.16 % | 4.43 % | 600 |
+| SSPCVNet | 1.91 % | 2.42 % | 1.99 % | 5.39 % | 2.55 % | 900 |
+| CSPN | 1.64 % | 2.11 % | 1.91 % | 4.47 % | 2.33 % | 1000 |
+| **StereoSA**| **1.30 %** | **1.67 %** | **1.60 %** | 3.33 % | **1.89 %** | 67 (RTX 4070S) |
+
+### Results on SceneFlow dataset.
+
+| Method (Real-Time) | EPE [px] | Runtime (ms) | GPU |
+|:-:|:-:|:-:|:-:|
+| DCVSMNet | 0.60 | 67 | RTX 3080 |
+| ACVNet | 0.48 | 200 | RTX 3090 |
+| Selective-IGEV | 0.44 | 240 | RTX 3090 |
+| IGEV++ | 0.43 | 280 | RTX 3080 |
+| DLNR | 0.47 | 297 | A100 |
+| MoCha-Stereo | **0.41** | 340 | 2 x A6000 |
+| DiffuVolume | 0.46 | 360 | RTX 3090 |
+| IGEV-Stereo | 0.47 | 370 | RTX 3090 |
+| **StereoSA** | **0.41** | **64** | RTX 4070S |
+
+
 # Integration into visual-inertial odometry
 This video was recorded during a straight-line navigation test on the Hunter V2 Robot.
 For more details, please visit the project repository: [https://github.com/M2219/ACNMR](https://github.com/M2219/ACNMR)
@@ -51,35 +81,6 @@ This fork modifies the original code to accept disparity maps for finding keypoi
 
 ![ATE Table](./imgs/table.png)
 
-
-# SOTA results on KITTI dataset.
-
-| Method | KITTI 2012 <br> (3-noc) | KITTI 2012 <br> (3-all) | KITTI 2015 <br> (D1-bg) | KITTI 2015 <br> (D1-fg) | KITTI 2015 <br> (D1-all) |Runtime <br> (ms)|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| CFNet | 1.23 % | 1.58 % | 1.54 % | 3.56 % | 1.94 % | 180 |
-| IGEV-Stereo | 1.55 % | 1.93 % | 1.79 % | 3.82 % | 2.13 % | 180 |
-| ACVNet | 1.62 % | 2.03 % | 1.81 % | 4.09 % | 2.19 % | 200 |
-| LEAStereo | 1.62 % | 2.03 % | 1.81 % | 4.09 % | 2.19 % | 300 |
-| EdgeStereo-V2 | 1.41 % | 1.89 % | 1.74 % | **3.20 %** | 1.98 % | 320 |
-| CREStereo | 1.45 % | 1.85 % | 1.70 % | 3.53 % | 2.01 % | 410 |
-| SegStereo | 4.11 % | 4.65 % | 2.21 % | 6.16 % | 4.43 % | 600 |
-| SSPCVNet | 1.91 % | 2.42 % | 1.99 % | 5.39 % | 2.55 % | 900 |
-| CSPN | 1.64 % | 2.11 % | 1.91 % | 4.47 % | 2.33 % | 1000 |
-| **StereoSA**| **1.30 %** | **1.67 %** | **1.60 %** | 3.33 % | **1.89 %** | 67 (RTX 4070S) |
-
-# Results on SceneFlow dataset.
-
-| Method (Real-Time) | EPE [px] | Runtime (ms) | GPU |
-|:-:|:-:|:-:|:-:|
-| DCVSMNet | 0.60 | 67 | RTX 3080 |
-| ACVNet | 0.48 | 200 | RTX 3090 |
-| Selective-IGEV | 0.44 | 240 | RTX 3090 |
-| IGEV++ | 0.43 | 280 | RTX 3080 |
-| DLNR | 0.47 | 297 | A100 |
-| MoCha-Stereo | **0.41** | 340 | 2 x A6000 |
-| DiffuVolume | 0.46 | 360 | RTX 3090 |
-| IGEV-Stereo | 0.47 | 370 | RTX 3090 |
-| **StereoSA** | **0.41** | **64** | RTX 4070S |
 # How to use
 
 ## Environment
