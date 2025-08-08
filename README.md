@@ -13,7 +13,7 @@
 </p>
 
 
-# Performance on KITTI raw dataset.
+# Performance on KITTI raw dataset
 
 Note: for inference on KITTI raw refer to this repo [https://github.com/M2219/ESMStereo](https://github.com/M2219/ESMStereo)
 
@@ -31,7 +31,7 @@ The confidence branch generates a map that detects and suppresses unreliable dis
 </p>
 
 
-# Integration into visual-inertial odometry.
+# Integration into visual-inertial odometry
 This video was recorded during a straight-line navigation test on the Hunter V2 Robot.
 For more details, please visit the project repository: [https://github.com/M2219/ACNMR](https://github.com/M2219/ACNMR)
 
