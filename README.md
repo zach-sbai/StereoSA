@@ -31,8 +31,7 @@ The confidence branch generates a map that detects and suppresses unreliable dis
 </p>
 
 
-
-# Performance in visual-inertial odometry.
+# Integration in visual-inertial odometry.
 This video was recorded during a straight-line navigation test on the Hunter V2 Robot.
 For more details, please visit the project repository: [https://github.com/M2219/ACNMR](https://github.com/M2219/ACNMR)
 
@@ -45,8 +44,13 @@ This fork modifies the original code to accept disparity maps for finding keypoi
 </p>
 
 <p align="center">
-  <img width="600" height="500" src="./imgs/mygif.gif" data-zoomable>
+  <img width="600" height="300" src="./imgs/mygif.gif" data-zoomable>
 </p>
+
+### Absolute Trajectory Error (ATE) on EuRoC MAV Dataset (Degree/Meters)
+
+![ATE Table](./imgs/table.png)
+
 
 # SOTA results.
 
