@@ -52,7 +52,7 @@ This fork modifies the original code to accept disparity maps for finding keypoi
 ![ATE Table](./imgs/table.png)
 
 
-# SOTA results.
+# SOTA results on KITTI dataset.
 
 | Method | KITTI 2012 <br> (3-noc) | KITTI 2012 <br> (3-all) | KITTI 2015 <br> (D1-bg) | KITTI 2015 <br> (D1-fg) | KITTI 2015 <br> (D1-all) |Runtime <br> (ms)|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -67,7 +67,8 @@ This fork modifies the original code to accept disparity maps for finding keypoi
 | CSPN | 1.64 % | 2.11 % | 1.91 % | 4.47 % | 2.33 % | 1000 |
 | **StereoSA**| **1.30 %** | **1.67 %** | **1.60 %** | 3.33 % | **1.89 %** | 67 (RTX 4070S) |
 
-The results on SceneFlow dataset.
+# Results on SceneFlow dataset.
+
 | Method (Real-Time) | EPE [px] | Runtime (ms) | GPU |
 |:-:|:-:|:-:|:-:|
 | DCVSMNet | 0.60 | 67 | RTX 3080 |
