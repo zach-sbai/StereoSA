@@ -47,7 +47,7 @@ This fork modifies the original code to accept disparity maps for finding keypoi
   <img width="600" height="300" src="./imgs/mygif.gif" data-zoomable>
 </p>
 
-### Absolute Trajectory Error (ATE) on EuRoC MAV Dataset (Degree/Meters)
+### Absolute Trajectory Error (ATE) on EuRoC MAV Dataset (Degree/Meters) using StereoSA
 
 ![ATE Table](./imgs/table.png)
 
