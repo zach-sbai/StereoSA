@@ -1,7 +1,7 @@
 <p align="center">
   <h1 align="center">Enhancing Stereo Matching with Multi-Scale Selective Attention Aggregation</h1>
   <p align="center">
-    Mahmoud Tahmasebi* (mahmoud.tahmasebi@research.atu.ie)
+    Mahmoud Tahmasebi* (mahmoud.tahmasebi@research.atu.ie), Saif Huq, Kevin Meehan, Marion McAfee 
   </p>
   <h3 align="center"><a href="">Paper</a>
   <div align="center"></div>
