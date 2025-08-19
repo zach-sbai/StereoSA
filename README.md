@@ -19,7 +19,7 @@ Note: for inference on KITTI raw refer to this repo [https://github.com/M2219/ES
 
 
 <p align="center">
-  <img width="600" height="500" src="./imgs/stereoSA_disp.gif" data-zoomable>
+  <img width="600" height="500" src="./imgs/StereoSA_disp.gif" data-zoomable>
 </p>
 
 
